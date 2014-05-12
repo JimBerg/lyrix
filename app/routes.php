@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('hello');
-});
-Route::get('/', 'HomeController@index');
+});*/
+Route::get('/', 'UserController@getLogin');
+Route::controller('user', 'UserController');
+Route::controller('search', 'SearchController');
+Route::controller('lists', 'ListsController');

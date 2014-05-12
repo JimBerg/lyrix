@@ -14,13 +14,32 @@
     </head>
 
     <body>
-
- <!--   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-        </div>
-    </div> -->
     <div class="container">
-        @yield('content')
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                @if(Auth::check())
+                    <li>{{ HTML::link('user/logout', 'Logout') }}</li>
+                @else
+                    <li>{{ HTML::link('user/login', 'Login') }}</li>
+                    <li>{{ HTML::link('user/register', 'Registrieren') }}</li>
+                @endif
+            </ul>
+            <h3 class="text-muted">Lyrix Search Tool</h3>
+        </div>
+        @if(Auth::check())
+        <div class="jumbotron">
+            <ul>
+                <li>{{ HTML::link('search/index', 'Suche') }}</li>
+                <li>{{ HTML::link('lists/newlist', 'Neue Liste') }}</li>
+                <li>{{ HTML::link('lists/mylists', 'Meine Listen') }}</li>
+            </ul>
+        </div>
+        @endif
+        <div class="row">
+            <div class="col-lg-12">
+                @yield('content')
+            </div>
+        </div>
     </div>
     {{ HTML::script('js/jquery-1.11.1.min.js') }}
     {{ HTML::script('js/bootstrap.min.js') }}
