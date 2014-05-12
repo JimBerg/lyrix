@@ -54,8 +54,8 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'database',
+			'host'      => '127.0.0.1',
+			'database'  => 'lyrix',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
@@ -76,10 +76,10 @@ return array(
 
 		'sqlsrv' => array(
 			'driver'   => 'sqlsrv',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
+			'host'     => 'medon.netrics.ch:1433',
+			'database' => 'mxm_dictionary',
+			'username' => 'dbuser_mxm',
+			'password' => 'dido685k',
 			'prefix'   => '',
 		),
 
